@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 class Dictionary {
-	private static String [] kor = { "»ç¶û", "¾Æ±â", "µ·", "¹Ì·¡", "Èñ¸Á" };
+	private static String [] kor = { "ì‚¬ë‘", "ì•„ê¸°", "ëˆ", "ë¯¸ë˜", "í¬ë§" };
 	private static String [] eng = { "love", "baby", "money", "future", "hope" };
 	public static String kor2Eng(String word) {
 		for(int i=0; i<kor.length; i++) {
 			if(kor[i].equals(word)) 
-				return eng[i]; // ¹ß°ßÇÏ°í ÀÎµ¦½º iÀÇ ¿µ¾î ´Ü¾î ¸®ÅÏ
+				return eng[i];
 		}
-		return null; // ¹ß°ßÇÒ ¼ö ¾øÀ½
+		return null;
 	}
 }
 
@@ -16,18 +16,18 @@ public class DicApp {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÇÑ¿µ ´Ü¾î °Ë»ö ÇÁ·Î±×·¥ÀÔ´Ï´Ù.");
+		System.out.println("í•œì˜ ë‹¨ì–´ ê²€ìƒ‰ í”„ë¡œê·¸ë¨ì…ë‹ˆë‹¤.");
 		while(true) {
-			System.out.print("ÇÑ±Û ´Ü¾î?");
+			System.out.print("í•œê¸€ ë‹¨ì–´?");
 			String kor = scanner.next();
-			if(kor.equals("±×¸¸")) {
+			if(kor.equals("ê·¸ë§Œ")) {
 				break;
 			}
 			String eng = Dictionary.kor2Eng(kor);
 			if(eng == null)
-				System.out.println(kor + "´Â ÀúÀÇ »çÀü¿¡ ¾ø½À´Ï´Ù.");
+				System.out.println(kor + "ëŠ” ì €ì˜ ì‚¬ì „ì— ì—†ìŠµë‹ˆë‹¤.");
 			else {
-				System.out.println(kor + "Àº " + eng);				
+				System.out.println(kor + "ì€ " + eng);				
 			}
 		}
 		
